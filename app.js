@@ -15,7 +15,7 @@ $form.addEventListener('submit', async (event) => {
   event.preventDefault();
   const form = new FormData($form);
   const id = form.get('id') - 1;
-  const pokemon = await getPokemon(id);
+  const pokemon = await getPokemon(id + 1);
   console.log(pokemon);
   const pokemonSprite = pokemon.sprites.front_default;
   const image = new Image();
